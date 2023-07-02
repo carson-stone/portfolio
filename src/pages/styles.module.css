@@ -1,0 +1,9 @@
+.Home {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem;
+  box-sizing: border-box;
+}

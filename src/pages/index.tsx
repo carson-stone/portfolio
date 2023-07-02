@@ -1,5 +1,14 @@
+import { Menu } from "@/components/Menu"
+import { Terminal } from "@/components/Terminal"
+
+import styles from "./styles.module.css"
+
 export default function Home() {
   return (
-    <div>Carson&apos;s portfolio</div>
+    <div className={styles.Home}>
+      <Menu />
+
+      <Terminal />
+    </div>
   )
 }

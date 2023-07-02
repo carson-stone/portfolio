@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Carson Stone</title>
       </Head>
 
-      <Component {...pageProps} />
+      <Component {...pageProps} className={`App ${pageProps.className}`} />
     </>
   )
 }

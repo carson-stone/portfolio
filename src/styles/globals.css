@@ -3,7 +3,27 @@
 @tailwind utilities;
 
 @layer components {
-  h1, h2, h3, h4, h5, h6 {
+  html {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  body {
+    height: 100%;
+    background-color: #0a090c;
+    color: #ffffff;
+  }
+
+  body > *:first-child {
+    height: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 700;
   }
 
