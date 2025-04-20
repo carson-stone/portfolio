@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <div className={styles.Home}>
       <Menu />
-
       <Terminal />
     </div>
   )

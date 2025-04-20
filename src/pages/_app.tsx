@@ -4,7 +4,7 @@ import Script from 'next/script'
 import Head from 'next/head'
 import { inter } from "@/utils/fonts"
 
-import 'node_modules/xterm/css/xterm.css'
+import 'node_modules/@xterm/xterm/css/xterm.css'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -25,8 +25,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Carson Stone</title>
       </Head>
-
-      <Script src="node_modules/xterm/lib/xterm.js" />
 
       <Component {...pageProps} className={`App ${pageProps.className}`} />
     </>

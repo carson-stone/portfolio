@@ -1,22 +1,26 @@
-import { useMemo, useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Terminal as TerminalController } from "@/services"
-import TerminalPrompt from './TerminalPrompt/TerminalPrompt'
 
 import styles from "./styles.module.css"
 
 function Terminal() {
-  const terminal = useMemo(
-    () => (new TerminalController("guest", "carson.is")),
-    []
+  const [terminalController] = useState(
+    () => (new TerminalController("guest", "carson.is"))
   )
+ const terminalElement = useRef<HTMLDivElement | null>(null)
 
-  // useEffect(() => {
+  useEffect(() => {
+    if (terminalElement.current) {
+      terminalController.open(terminalElement.current);
+    }
 
-  // })
+    return () => terminalController.close()
+  },[terminalController])
+
 
   return (
     <div className={styles.Terminal}>
-      <TerminalPrompt terminal={terminal} />
+      <div ref={terminalElement} />
     </div>
   )
 }
